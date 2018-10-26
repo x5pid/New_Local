@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Producteur</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Start your project here-->
+
+  <!--Main Navigation-->
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light white">
+      <div class="container">
+        <!--LOGO-->
+        <a class="navbar-brand" href="index.html">
+          <img src="img/svg/logo.svg" height="80" alt="logo">
+        </a>
+
+        <!-- Links -->
+        <div class="row text-left">
+
+          <div class="btn-group">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Producteur
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="Profil.html"><i class="fa fa-user" aria-hidden="true"></i> Profil</a>
+              <a class="dropdown-item" href="Bilan.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Bilan</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="index.html"><i class="fa fa-close" aria-hidden="true"></i> Déconnexion</a>
+            </div>
+          </div>
+
+        </div>
+    </nav>
+    <!-- Navbar -->
+  </header>
+  <!--Main Navigation-->
+
+  <main class="mt-5 pt-4">
+
+    <!--
+      <div class="bc-icons-2 mt-5">
+      <ol class="breadcrumb cyan lighten-4">
+        <li class="breadcrumb-item"><a class="black-text" href="#">Producteur</a><i class="fa fa-angle-left mx-2"
+            aria-hidden="true"></i></li>
+        <li class="breadcrumb-item active">Produit</li>
+      </ol>
+    </div>
+    -->
+
+    <!-- Classic tabs -->
+    <div class="classic-tabs mt-5 mx-2">
+
+      <ul class="nav nav-tabs  lighten-3  font-weight-bold " id="myClassicTabShadow" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link  waves-light active show" id="profile-tab-classic-shadow" data-toggle="tab" href="#profile-classic-shadow"
+            role="tab" aria-controls="profile-classic-shadow" aria-selected="true">
+            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            En Vente
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" id="follow-tab-classic-shadow" data-toggle="tab" href="#follow-classic-shadow"
+            role="tab" aria-controls="follow-classic-shadow" aria-selected="false">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            En Ajout
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" id="contact-tab-classic-shadow" data-toggle="tab" href="#contact-classic-shadow"
+            role="tab" aria-controls="contact-classic-shadow" aria-selected="false">
+            <i class="fa fa-check" aria-hidden="true"></i>
+            Terminées</a>
+        </li>
+      </ul>
+
+      <div class="tab-content card" id="myClassicTabContentShadow">
+        <div class="tab-pane fade active show" id="profile-classic-shadow" role="tabpanel" aria-labelledby="profile-tab-classic-shadow">
+
+          <!-- Tableau -->
+          <div class="card">
+            <div class="card-body">
+              <div id="table" class="table-editable">
+
+                <div class="container-fluid ">
+
+                  <div class="row">
+                    <div class="col-md-5">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="defaultChecked2" checked>
+                        <label class="custom-control-label" for="defaultChecked2">Tout séléctionner</label>
+                        <button class="btn btn-sm btn-danger">Supprimer</button>
+                      </div>
+                    </div>
+
+                    <div class="col-md-1">
+                      <select class="custom-select-sm form-control form-control-sm">
+                        <option value="" disabled selected>Catégorie</option>
+                        <option value="1">Fruits</option>
+                        <option value="2">Légumes</option>
+                        <option value="3">Viandes</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-5 text-center  ">
+                      <span class="table-add float-right mb-3 mr-2">
+                        <a href="Ajouter.html" class="text-success">
+                          <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+                          Ajouter article
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Table -->
+                <table class="table table-responsive-md table-striped text-center ">
+                  <tr>
+                    <th class="text-center">Nom</th>
+                    <th class="text-center">N°Lot</th>
+                    <th class="text-center">Date de péremption</th>
+                    <th class="text-center">Prix(unité ou Kg)</th>
+                    <th class="text-center">Gain</th>
+                    <th class="text-center">Quantité vendu</th>
+                    <th class="text-center">Quantité total</th>
+                    <th class="text-center"></th>
+                  </tr>
+                  <!--row-->
+                  <tr>
+                    <td class="pt-3-half">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-1">
+                            <input type="checkbox" name="img" value="">
+                          </div>
+                          <div class="col-md-4">
+                            <img src="img/shop/abricot.png">
+                          </div>
+                          <div class="col-md-4">
+                            Abricot
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="pt-3-half">N°1478547</td>
+                    <td class="pt-3-half">12/08/2019</td>
+                    <td class="pt-3-half">10€/Kg </td>
+                    <td class="pt-3-half">110€</td>
+                    <td class="pt-3-half">11 Kg</td>
+                    <td class="pt-3-half">210 Kg</td>
+                    <td>
+                      <a><i class="fa fa-edit indigo-text fa-2x" aria-hidden="true"></i></a>
+                      <a><i class="fa fa-trash red-text fa-2x" aria-hidden="true"></i></a>
+                    </td>
+                  </tr>
+                  <!--row-->
+                  <tr>
+                    <td class="pt-3-half">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-1">
+                            <input type="checkbox" name="img" value="">
+                          </div>
+                          <div class="col-md-4">
+                            <img src="img/shop/tomate.png">
+                          </div>
+                          <div class="col-md-4">
+                            Tomate
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="pt-3-half">N°1478547</td>
+                    <td class="pt-3-half">12/08/2019</td>
+                    <td class="pt-3-half">10€/Kg </td>
+                    <td class="pt-3-half">110€</td>
+                    <td class="pt-3-half">11 Kg</td>
+                    <td class="pt-3-half">210 Kg</td>
+                    <td>
+                      <a><i class="fa fa-edit indigo-text fa-2x" aria-hidden="true"></i></a>
+                      <a><i class="fa fa-trash red-text fa-2x" aria-hidden="true"></i></a>
+                    </td>
+                  </tr>
+                  <!--row-->
+                  <tr>
+                    <td class="pt-3-half">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-1">
+                            <input type="checkbox" name="img" value="">
+                          </div>
+                          <div class="col-md-4">
+                            <img src="img/shop/myrtille.png">
+                          </div>
+                          <div class="col-md-4">
+                            Myrtille
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="pt-3-half">N°1478547</td>
+                    <td class="pt-3-half">12/08/2019</td>
+                    <td class="pt-3-half">10€/Kg </td>
+                    <td class="pt-3-half">110€</td>
+                    <td class="pt-3-half">11 Kg</td>
+                    <td class="pt-3-half">210 Kg</td>
+                    <td>
+                      <a><i class="fa fa-edit indigo-text fa-2x" aria-hidden="true"></i></a>
+                      <a><i class="fa fa-trash red-text fa-2x" aria-hidden="true"></i></a>
+                    </td>
+                  </tr>
+                  <!--row-->
+                  <tr>
+                    <td class="pt-3-half">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-1">
+                            <input type="checkbox" name="img" value="">
+                          </div>
+                          <div class="col-md-4">
+                            <img src="img/shop/patate.png">
+                          </div>
+                          <div class="col-md-4">
+                            Patate
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="pt-3-half">N°1478547</td>
+                    <td class="pt-3-half">12/08/2019</td>
+                    <td class="pt-3-half">10€/Kg </td>
+                    <td class="pt-3-half">110€</td>
+                    <td class="pt-3-half">11 Kg</td>
+                    <td class="pt-3-half">210 Kg</td>
+                    <td>
+                      <a><i class="fa fa-edit indigo-text fa-2x" aria-hidden="true"></i></a>
+                      <a><i class="fa fa-trash red-text fa-2x" aria-hidden="true"></i></a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="tab-pane fade" id="follow-classic-shadow" role="tabpanel" aria-labelledby="follow-tab-classic-shadow">
+
+          <!-- Tableau -->
+          <div class="card">
+            <div class="card-body">
+              <div id="table" class="table-editable">
+
+                <div class="container-fluid ">
+
+                  <div class="row">
+                    <div class="col-md-5">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="defaultChecked2" checked>
+                        <label class="custom-control-label" for="defaultChecked2">Tout séléctionner</label>
+                        <button class="btn btn-sm btn-danger">Supprimer</button>
+                      </div>
+                    </div>
+
+                    <div class="col-md-1">
+                      <select class="custom-select-sm form-control form-control-sm">
+                        <option value="" disabled selected>Catégorie</option>
+                        <option value="1">Fruits</option>
+                        <option value="2">Légumes</option>
+                        <option value="3">Viandes</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-5 text-center  ">
+                      <span class="table-add float-right mb-3 mr-2">
+                        <a href="Ajouter.html" class="text-success">
+                          <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+                          Ajouter article
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Table -->
+                <table class="table table-responsive-md table-striped text-center ">
+                  <tr>
+                    <th class="text-center">Nom</th>
+                    <th class="text-center">N°Lot</th>
+                    <th class="text-center">Date de péremption</th>
+                    <th class="text-center">Prix(unité ou Kg)</th>
+                    <th class="text-center">Quantité total</th>
+                    <th class="text-center"></th>
+                  </tr>
+                  <!--row-->
+                  <tr>
+                    <td class="pt-3-half">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-1">
+                            <input type="checkbox" name="img" value="">
+                          </div>
+                          <div class="col-md-4">
+                            <img src="img/shop/abricot.png">
+                          </div>
+                          <div class="col-md-4">
+                            Abricot
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="pt-3-half">N°1478547</td>
+                    <td class="pt-3-half">12/08/2019</td>
+                    <td class="pt-3-half">10€/Kg </td>
+                    <td class="pt-3-half">210 Kg</td>
+                    <td>
+                      <a><i class="fa fa-edit indigo-text fa-2x" aria-hidden="true"></i></a>
+                      <a><i class="fa fa-trash red-text fa-2x" aria-hidden="true"></i></a>
+                    </td>
+                  </tr>
+                  <!--row-->
+                  <tr>
+                    <td class="pt-3-half">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-1">
+                            <input type="checkbox" name="img" value="">
+                          </div>
+                          <div class="col-md-4">
+                            <img src="img/shop/tomate.png">
+                          </div>
+                          <div class="col-md-4">
+                            Tomate
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="pt-3-half">N°1478547</td>
+                    <td class="pt-3-half">12/08/2019</td>
+                    <td class="pt-3-half">10€/Kg </td>
+                    <td class="pt-3-half">210 Kg</td>
+                    <td>
+                      <a><i class="fa fa-edit indigo-text fa-2x" aria-hidden="true"></i></a>
+                      <a><i class="fa fa-trash red-text fa-2x" aria-hidden="true"></i></a>
+                    </td>
+                  </tr>
+                  <!--row-->
+                  <tr>
+                    <td class="pt-3-half">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-1">
+                            <input type="checkbox" name="img" value="">
+                          </div>
+                          <div class="col-md-4">
+                            <img src="img/shop/myrtille.png">
+                          </div>
+                          <div class="col-md-4">
+                            Myrtille
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="pt-3-half">N°1478547</td>
+                    <td class="pt-3-half">12/08/2019</td>
+                    <td class="pt-3-half">10€/Kg </td>
+                    <td class="pt-3-half">210 Kg</td>
+                    <td>
+                      <a><i class="fa fa-edit indigo-text fa-2x" aria-hidden="true"></i></a>
+                      <a><i class="fa fa-trash red-text fa-2x" aria-hidden="true"></i></a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="contact-classic-shadow" role="tabpanel" aria-labelledby="contact-tab-classic-shadow">
+
+          <!-- Tableau -->
+          <div class="card">
+            <div class="card-body">
+              <div id="table" class="table-editable">
+                <!-- Table -->
+                <table class="table table-responsive-md table-striped text-center ">
+                  <tr>
+                    <th class="text-center">Nom</th>
+                    <th class="text-center">N°Lot</th>
+                    <th class="text-center">Date de péremption</th>
+                    <th class="text-center">Prix(unité ou Kg)</th>
+                    <th class="text-center">Gain</th>
+                    <th class="text-center">Quantité vendu</th>
+                    <th class="text-center">Quantité total</th>
+                  </tr>
+                  <!--row-->
+                  <tr>
+                    <td class="pt-3-half">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <img src="img/shop/abricot.png">
+                          </div>
+                          <div class="col-md-4">
+                            Abricot
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="pt-3-half">N°1478547</td>
+                    <td class="pt-3-half">12/08/2019</td>
+                    <td class="pt-3-half">10€/Kg </td>
+                    <td class="pt-3-half">110€</td>
+                    <td class="pt-3-half">11 Kg</td>
+                    <td class="pt-3-half">210 Kg</td>
+                  </tr>
+                  <!--row-->
+                  <tr>
+                    <td class="pt-3-half">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <img src="img/shop/tomate.png">
+                          </div>
+                          <div class="col-md-4">
+                            Tomate
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="pt-3-half">N°1478547</td>
+                    <td class="pt-3-half">12/08/2019</td>
+                    <td class="pt-3-half">10€/Kg </td>
+                    <td class="pt-3-half">110€</td>
+                    <td class="pt-3-half">11 Kg</td>
+                    <td class="pt-3-half">210 Kg</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+  <!-- /Start your project here-->
+  <!-- Footer -->
+  <footer class="page-footer font-small cyan darken-3 w-100" style="position: absolute;bottom: 0%;">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-12 ">
+          <div class="mb-5 flex-center">
+
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fa fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!--Pinterest-->
+            <a class="pin-ic">
+              <i class="fa fa-pinterest fa-lg white-text fa-2x"> </i>
+            </a>
+          </div>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="#"> New Local</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>
